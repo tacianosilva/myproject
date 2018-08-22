@@ -6,7 +6,7 @@
   <groupId>br.ufrn.ceres.bsi.pweb</groupId>
   <artifactId>myproject</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
 
   <name>MyProject</name>
   <description>Um exemplo de projeto Maven - PWeb</description>
