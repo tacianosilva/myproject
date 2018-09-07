@@ -52,7 +52,7 @@
                 <version>3.7.1</version>
                 <configuration>
                     <locales>en,pt_BR</locales>
-                    <skipDeploy>true</skipDeploy><!-- don't deploy site with 
+                    <skipDeploy>true</skipDeploy><!-- don't deploy site with
                         maven-site-plugin -->
                 </configuration>
             </plugin>
@@ -81,6 +81,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.8</version>
                 <executions>
                     <execution>
                         <id>copy-dependencies</id>
@@ -99,6 +100,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.0</version>
                 <configuration>
                     <archive>
                         <manifest>

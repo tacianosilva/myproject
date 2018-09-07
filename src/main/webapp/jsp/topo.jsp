@@ -1,6 +1,6 @@
-
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Date"%>
+
 <%!
 public String fncMES(int mes)
 {
@@ -27,10 +27,13 @@ public String fncMES(int mes)
     }
 %>
 <h1> Pagina JSP </h1>
-<h4> <%
+<h4> 
+
+<%
 int mes = Integer.parseInt(new SimpleDateFormat("M").format(new Date()));
 int dia = Integer.parseInt(new SimpleDateFormat("dd").format(new Date()));
 int ano = Integer.parseInt(new SimpleDateFormat("yyyy").format(new Date()));
  
 out.println("Hoje é dia " + dia + " de " + fncMES(mes) + " de " + ano);
-%></h4>
+%>
+</h4>
