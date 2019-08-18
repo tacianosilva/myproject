@@ -10,20 +10,22 @@
 </head>
 
 <body id="demo">
-    <a href="#"  class="button" onclick="mudarcss()">Link Button</a>
-    <script>
-    var controle = 0;
-    function mudarcss() {
+	<h1>Jhonatas Laurentino</h1>
+	<p>Clique no botão para mudar a cor do fundo!</p>
+	<a href="#"  class="button" onclick="mudarcss()">Link Button</a>
+	<script>
+		var controle = 0;
+		function mudarcss() { 
+		    if(controle ==0){
+		    	document.getElementById("demo").style.background = "blue";
+		        controle++;
+		        }
+		    else{
+		    	document.getElementById("demo").style.background = "green";
+		        controle--;
+		        }
+		}
+	</script>
 
-        if(controle ==0){
-            document.getElementById("demo").style.background = "blue";
-            controle++;
-            }
-        else{
-            document.getElementById("demo").style.background = "green";
-            controle--;
-            }
-    }
-</script>
 </body>
 </html>
