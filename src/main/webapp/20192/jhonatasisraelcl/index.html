@@ -10,23 +10,20 @@
 </head>
 
 <body id="demo">
+    <a href="#"  class="button" onclick="mudarcss()">Link Button</a>
+    <script>
+    var controle = 0;
+    function mudarcss() {
 
-<a href="#"  class="button" onclick="mudarcss()">Link Button</a>
-
-<script>
-var controle = 0;
-function mudarcss() {
-    
-    if(controle ==0){
-    	document.getElementById("demo").style.background = "blue";
-        controle++;
-        }
-    else{
-    	document.getElementById("demo").style.background = "green";
-        controle--;
-        }
-}
+        if(controle ==0){
+            document.getElementById("demo").style.background = "blue";
+            controle++;
+            }
+        else{
+            document.getElementById("demo").style.background = "green";
+            controle--;
+            }
+    }
 </script>
-
 </body>
 </html>
