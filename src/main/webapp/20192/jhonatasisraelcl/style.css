@@ -1,4 +1,10 @@
 
+h1{
+	text-align: center;
+	text-shadow: 2px 2px #ff0000;
+	text-decoration-color: white;
+	font-size: 50px;
+}
 .button {
     background-color: #4CAF50;
     border: none;
