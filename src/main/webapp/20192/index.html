@@ -1,23 +1,54 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="UTF-8">
-    <title>MyProject 2019.2 - Página de Exemplos para PWeb</title>
+	<meta charset="utf-8">
+	<title>Jhonatas Laurentino</title>
+	<meta name="author" content="Jhonatas Laurentino">
+    <meta name="description" content="1º site da materia de PWEB - BSI - UFRN CAICÓ">
+    <meta name="keywords" content="sites, web, desenvolvimento">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body>
-    <h1>Programação para Web 2019.2</h1>
-    
-    <p>Página com os exercícios dos alunos de Programação para Web.</p>
-       
-    <h2>Lista de Páginas dos Alunos:</h2>
-    
-    <ul>
-        <li><a href="tacianosilva/html5/exemplos.html">Exemplos de Taciano</a></li>
-        <li><a href="">Exemplos de Xuxa</a></li>
-        <li><a href="">Exemplos de Shasha</a></li>
-    </ul>
+<body id="demo">
+	<header>
+		<nav>
+			<h3 id="logo"> Jhonatas Laurentino</h3>
+			<img src="img/menu.png" class="hamburger">
+
+		</nav>
+		<section>
+			<div class="hero">
+				<img src="img/img.png">
+				<h1 class="headline">JHON JHON</h1>
+			</div>
+		</section>
+	</header>
+
+	<div class="slider"></div>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="app.js"></script>
+
+
+	<h1>Jhonatas Laurentino</h1>
+	<p>Clique no botão para mudar a cor do fundo!</p>
+	<a href="#"  class="button" onclick="mudarcss()">Link Button</a>
+	<script>
+		var controle = 0;
+		function mudarcss() { 
+		    if(controle ==0){
+		    	document.getElementById("demo").style.background = "blue";
+		        controle++;
+		        }
+		    else{
+		    	document.getElementById("demo").style.background = "green";
+		        controle--;
+		        }
+		}
+	</script>
 
 </body>
 </html>
