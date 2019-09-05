@@ -7,27 +7,36 @@
     </head>
     <body>
         <%@include file="topo.jsp"%>
-        Dados do formulário<br>
+        <h3>Dados do formulário</h3>
+        <br>
+        <%
+        String numero = request.getParameter("numero");
+        int v = Integer.parseInt(numero);
+        out.println("Divisores:<br>");
+        out.println("É par ou ímpar?<br>");
+        if (ehPar(v)) {
+            out.println("<strong>O número " + v + " é par!!</strong><br>");
+        } else {
+            out.println("<strong>O número " + v + " é ímpar!!</strong><br>");
+        }
+        out.println("É primo?<br>");
+        out.println("É perfeito?<br>");
+        %>
+        
+        <hr>
+        
         <%
         String nome = request.getParameter("txtnome");
         if(nome=="") {
             out.println("Nome não foi digitato");
         } else {
-             out.println("Seu nome é " + nome);
+            out.println("Seu nome é " + nome);
         }
         %>
-        <br>
-        <br>E-Mail: <%=request.getParameter("txtemail")%><br>
+        <br><br>
+        E-Mail: <%=request.getParameter("txtemail")%><br>
         Data de Nascimento: <%=request.getParameter("txtdtnasc")%><br>
-        <%
-        String numero = request.getParameter("numero");
-        int v = Integer.parseInt(numero);
-        if (ehPar(v)) {
-            out.println("O número é par!!");
-        } else {
-            out.println("O número é ímpar!!");
-        }
-        %>
+
         <%@include file="rodape.jsp"%>
     </body>
 </html>
