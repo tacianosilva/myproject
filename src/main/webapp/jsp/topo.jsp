@@ -1,3 +1,4 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Date"%>
 
@@ -8,7 +9,7 @@ public String fncMES(int mes)
     switch(mes){
         case 1: retorno="Janeiro";break;
         case 2: retorno="Fevereiro";break;
-        case 3: retorno="Março";break;
+        case 3: retorno="Marï¿½o";break;
         case 4: retorno="Abril";break;
         case 5: retorno="Maio";break;
         case 6: retorno="Junho";break;
@@ -34,6 +35,6 @@ int mes = Integer.parseInt(new SimpleDateFormat("M").format(new Date()));
 int dia = Integer.parseInt(new SimpleDateFormat("dd").format(new Date()));
 int ano = Integer.parseInt(new SimpleDateFormat("yyyy").format(new Date()));
  
-out.println("Hoje é dia " + dia + " de " + fncMES(mes) + " de " + ano);
+out.println("Hoje Ã© dia " + dia + " de " + fncMES(mes) + " de " + ano);
 %>
 </h4>
