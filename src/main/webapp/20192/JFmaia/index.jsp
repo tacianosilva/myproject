@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<%@page contentType="text/html" import="java.util.*, java.text.*"
-	pageEncoding="UTF-8"%>
+<%@page contentType="text/html" import="java.util.*, java.text.*" pageEncoding="UTF-8"%>
 <html lang="pt-br">
 
   <head>
