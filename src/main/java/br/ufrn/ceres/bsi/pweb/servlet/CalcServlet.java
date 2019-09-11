@@ -44,12 +44,14 @@ public class CalcServlet extends HttpServlet {
         response.setContentType("text/html");
         response.setCharacterEncoding("UTF-8");
 
-        String number = request.getParameter("numero");
-        String nome = request.getParameter("txtnome");
-        
-        response.getWriter().append("Esse foi o número digitado: " + number);
-        response.getWriter().append("<br>Esse foi o nome digitado: " + nome);
-        response.getWriter().append("<br>");
+        String number = request.getParameter("number");
+        String nome = request.getParameter("nome");
+        response.getWriter().append("\nEsse foi o número digitado: " + number);
+        response.getWriter().append("\nEsse foi o nome digitado: " + nome);
+        if(Integer.parseInt(number) % 2 == 0)
+            System.out.println("Numero Par\n");
+        else
+            System.out.println("Numero Impar\n");
 
         doGet(request, response);
     }
