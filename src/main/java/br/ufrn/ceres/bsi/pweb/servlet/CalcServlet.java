@@ -48,10 +48,6 @@ public class CalcServlet extends HttpServlet {
         String nome = request.getParameter("nome");
         response.getWriter().append("\nEsse foi o número digitado: " + number);
         response.getWriter().append("\nEsse foi o nome digitado: " + nome);
-        if(Integer.parseInt(number) % 2 == 0)
-            System.out.println("Numero Par\n");
-        else
-            System.out.println("Numero Impar\n");
 
         doGet(request, response);
     }
