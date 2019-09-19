@@ -6,6 +6,8 @@
 <title>Página JSP Olá Mundo</title>
 </head>
 <body>
+
+    <h1>Formulário</h1>
         <form action="/myproject/CalcServlet" method="post">
             Número:<input type="number" name="numero"/><br><br>
             Nome:<input type="text" name="txtnome"/><br>
