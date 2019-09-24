@@ -5,7 +5,6 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 
 
-//import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -34,74 +33,48 @@ public class KaelServlet extends HttpServlet {
     
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //Definir o Tipo do Conteúdo response para HTML
         response.setContentType("text/html");
         response.setCharacterEncoding("UTF-8");
         
         String numero, ePar, ePerfeito, ePrimo;
         ArrayList<Integer> lista = new ArrayList<>();
-        //int i = 0;
         
         numero = request.getParameter("numero");
         
         
         
         
-        	//response.getWriter().append("Esse foi o número digitado: " + number + "<br>");
-        	
-        	//Exibindo se é par ou ímpar
         	if (parImpar(Integer.parseInt(numero)) == 1) {
-            	//response.getWriter().append("É par.<br>");
         		ePar = "é par";
-        		
             } else {
-            	//response.getWriter().append("<br>É ímpar.<br>");
             	ePar = "é ímpar";
             }
             
         	
-        	//Exibindo se é primo
             if (primo(Integer.parseInt(numero)) == 1) {
-                //response.getWriter().append("É primo.<br>");
             	ePrimo = "é primo";
             } else {
-                //response.getWriter().append("Não é primo.<br>");
                 ePrimo = "não é primo";
             }
             
             
-            //Exibindo lista de divisores
             lista = listaDeDivisores(Integer.parseInt(numero));
-            /*response.getWriter().append("Lista de divisores: ");
-            while(i != lista.size()-1) {
-                response.getWriter().append(""+lista.get(i)+"    ");
-                i++;
-            }
-            i = 0;
-            response.getWriter().append(""+number+"<br>");*/
             
             
             
-            //Exibindo se o número é perfeito
             if (numeroPerfeito(Integer.parseInt(numero), lista) == 1) {
-                //response.getWriter().append("É perfeito.<br>");
             	ePerfeito = "é perfeito";
             } else {
-                //response.getWriter().append("Não é perfeito.<br>");
             	ePerfeito = "não é perfeito";
             }
         
         
-        //RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/20192/kaelsilva/calculadora.jsp");
-        //dispatcher.forward(request, response);
         request.setAttribute("ePar", ePar);
         request.setAttribute("ePrimo", ePrimo);
         request.setAttribute("ePerfeito", ePerfeito);
         request.setAttribute("lista", lista);
         request.setAttribute("numero", numero);
         request.getRequestDispatcher("20192/kaelsilva/calculadora.jsp").forward(request,response);
-        //doGet(request, response);
-
     }
     
     public int parImpar(Integer n){
