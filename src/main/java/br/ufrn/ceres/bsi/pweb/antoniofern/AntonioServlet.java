@@ -2,6 +2,7 @@ package br.ufrn.ceres.bsi.pweb.antoniofern;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -57,6 +58,7 @@ public class AntonioServlet extends HttpServlet {
             response.getWriter().append("Esse número é ímpar");
         }
 
+        
         int numDivisiores = 0;
         for (int i = 1; i <= n; i++){
             if (n % i == 0){
@@ -68,6 +70,18 @@ public class AntonioServlet extends HttpServlet {
         }else{
             response.getWriter().append("<br>O número não é primo");
         }
+        
+        ArrayList<Integer> listaDivisores = new ArrayList<Integer>();
+        for (int d = 2; d <= n; d+=2){
+            if (n % d == 0){
+                listaDivisores.add(d);
+            }
+        }
+        response.getWriter().append("<br>Divisores<br>");
+        for(Integer numero:listaDivisores){
+            response.getWriter().append(String.valueOf(numero)+" ");
+        }
+
 
         doGet(request, response);
     }
