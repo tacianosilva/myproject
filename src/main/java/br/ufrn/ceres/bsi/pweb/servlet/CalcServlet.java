@@ -21,7 +21,10 @@ public class CalcServlet extends HttpServlet {
      */
     public CalcServlet() {
         super();
+<<<<<<< HEAD
         
+=======
+>>>>>>> 08365b2b1b7963448a6c48468025a14c5fd1b204
     }
 
     /**
@@ -30,7 +33,10 @@ public class CalcServlet extends HttpServlet {
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+<<<<<<< HEAD
    
+=======
+>>>>>>> 08365b2b1b7963448a6c48468025a14c5fd1b204
         PrintWriter saida = response.getWriter();
 
         saida.append("<br>Served at: ").append(request.getContextPath());
@@ -42,6 +48,7 @@ public class CalcServlet extends HttpServlet {
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+<<<<<<< HEAD
         // TODO Auto-generated method stub
        
 
@@ -50,9 +57,19 @@ public class CalcServlet extends HttpServlet {
 
         response.getWriter().append("Número digitado: " + number);
         response.getWriter().append("<br>Nome digitado: " + nome);
+=======
+        //Definir o Tipo do Conteúdo response para HTML
+        response.setContentType("text/html");
+        response.setCharacterEncoding("UTF-8");
+
+        String number = request.getParameter("numero");
+        String nome = request.getParameter("txtnome");
+        
+        response.getWriter().append("Esse foi o número digitado: " + number);
+        response.getWriter().append("<br>Esse foi o nome digitado: " + nome);
+>>>>>>> 08365b2b1b7963448a6c48468025a14c5fd1b204
         response.getWriter().append("<br>");
 
         doGet(request, response);
     }
-
 }

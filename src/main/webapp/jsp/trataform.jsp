@@ -8,7 +8,6 @@
     <body>
         <%@include file="topo.jsp"%>
         <h3>Dados do formulário</h3>
-        <br>
         <%
         String numero = request.getParameter("numero");
         int v = Integer.parseInt(numero);
