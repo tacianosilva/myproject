@@ -82,12 +82,24 @@ public class AntonioServlet extends HttpServlet {
                     listaDivisores.add(div);
                 }
             }
-            response.getWriter().append("<br>Divisores<br>");
+            response.getWriter().append("<br>Divisores: ");
             for(Integer numero:listaDivisores){
                 response.getWriter().append(String.valueOf(numero)+" ");
             }
         }
-        
+
+        int aux = 0;
+        for (int i = 1; i < n; i++){
+            if (n % i == 0){
+                aux = i + aux;
+            }
+        }  
+
+        if (aux == n)
+            response.getWriter().append("<br>Este número é perfeito");
+        else{
+            response.getWriter().append("<br>Este número não é perfeito");
+        }
         
 
 

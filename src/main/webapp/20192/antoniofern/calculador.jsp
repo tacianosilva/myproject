@@ -1,7 +1,8 @@
 <!DOCTYPE HTML>
+<%@page contentType="text/html" import="java.util.*, java.text.*"
+	pageEncoding="UTF-8"%>
 <html>
     <head>
-        <meta charset="UTF-8"/>
         <title>
             Página Calculadora
         </title>
