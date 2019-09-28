@@ -72,15 +72,23 @@ public class AntonioServlet extends HttpServlet {
         }
         
         ArrayList<Integer> listaDivisores = new ArrayList<Integer>();
-        for (int d = 2; d <= n; d+=2){
-            if (n % d == 0){
-                listaDivisores.add(d);
+        if (n == 0){
+            response.getWriter().append("<br>Não há divisores pra esse número");
+        }else{
+            listaDivisores.add(1);
+
+            for (int div = 2; div <= n; div++){
+                if (n % div == 0){
+                    listaDivisores.add(div);
+                }
+            }
+            response.getWriter().append("<br>Divisores<br>");
+            for(Integer numero:listaDivisores){
+                response.getWriter().append(String.valueOf(numero)+" ");
             }
         }
-        response.getWriter().append("<br>Divisores<br>");
-        for(Integer numero:listaDivisores){
-            response.getWriter().append(String.valueOf(numero)+" ");
-        }
+        
+        
 
 
         doGet(request, response);
