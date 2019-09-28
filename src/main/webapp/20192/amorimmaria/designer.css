@@ -1,0 +1,23 @@
+
+  form {
+    line-height: 25px;
+  }
+
+  h1 {
+    font-size: 2em;
+    overflow: break;
+  }
+
+  body {
+    background-color: rgb(216, 226, 221);
+    color: rgb(0, 2, 3);
+    font-family: "Fjalla One",Helvetica;
+    font-style: bold;
+  }
+
+  input[type=number] {
+    border: 4px solid rgb(26, 23, 23);
+    border-radius: 2px;
+  }
+
+ 
