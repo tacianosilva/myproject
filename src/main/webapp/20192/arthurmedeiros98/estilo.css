@@ -1,0 +1,71 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #00ffbf;
+}
+
+#index
+{
+  position:relative;
+  left:37%;
+  top:10em;
+  width:320px;
+  height:270px;
+}
+#index #formulario
+{ 
+  position:absolute;
+  display:block;   
+}
+ 
+ 
+fieldset
+{
+  background-color:#A7C0DC;
+  width:300px;
+  height:250px;
+}
+legend
+{
+  font-weight:bold;
+  font-family: "Segoe UI","Arial","Times New Roman";
+}
+#formulario label
+{
+  position:absolute;
+  left:19px;
+  margin-right:5px;
+}
+#formulario input.campo_nome
+{
+  background-color:#f1ff00;
+  position:absolute;
+  left:95px;
+  top:23px;
+  width:225px;
+}
+#formulario input.campo_email
+{ 
+  background-color:#f1ff00;
+  position:absolute;
+  left:95px;
+  margin-top:2px;
+  width:225px;
+}
+#formulario input.campo_num
+{
+  position:absolute;
+  background-color:#f1ff00;
+  left:220px;
+  margin-top:10px;
+  width:100px;
+}
+
+#formulario input.btn_submit
+{
+  border-style:dashed;
+  position:absolute;
+  bottom: 0.5em;
+  right:10px;
+  background-color:#00ffbf;
+}
