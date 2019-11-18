@@ -40,7 +40,7 @@ public class CalcServlet extends HttpServlet {
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         //Definir o Tipo do Conteúdo response para HTML
         response.setContentType("text/html");
         response.setCharacterEncoding("UTF-8");
