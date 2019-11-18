@@ -40,14 +40,18 @@ public class CalcServlet extends HttpServlet {
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         //Definir o Tipo do Conteúdo response para HTML
         response.setContentType("text/html");
         response.setCharacterEncoding("UTF-8");
 
-        String number = request.getParameter("number");
-        String nome = request.getParameter("nome");
-        response.getWriter().append("\nEsse foi o número digitado: " + number);
-        response.getWriter().append("\nEsse foi o nome digitado: " + nome);
+        String number = request.getParameter("numero");
+        String nome = request.getParameter("txtnome");
+        
+        response.getWriter().append("Esse foi o número digitado: " + number);
+        response.getWriter().append("<br>Esse foi o nome digitado: " + nome);
+
+        response.getWriter().append("<br>");
 
         doGet(request, response);
     }
