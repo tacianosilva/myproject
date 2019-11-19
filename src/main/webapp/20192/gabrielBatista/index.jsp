@@ -8,7 +8,7 @@
         <h1>
             <p>Calculadora</p>
         </h1>
-        <form action="/myproject/calculadora" method="post">
+        <form action="/myproject/CalcGB" method="post">
                 Nome: <input type="text" name="nome"/><br>
                 Numero: <input type="number" name="numero"/><br>
                 <input type="submit" value="submit"/>
