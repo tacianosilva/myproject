@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class CalcServlet
  */
-@WebServlet("/calculadora")
-public class calculadora extends HttpServlet {
+@WebServlet("/CalcGB")
+public class Calculadora extends HttpServlet {
 
     
   
@@ -23,7 +23,7 @@ public class calculadora extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public calculadora() {
+    public Calculadora() {
         super();
     }
 
